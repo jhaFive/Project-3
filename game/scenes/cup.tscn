@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcf3u2uprdby7"]
+
+[ext_resource type="Texture2D" uid="uid://w26wfwrcf8yi" path="res://assets/sprites/cup.png" id="1_7q2t1"]
+[ext_resource type="Script" path="res://scripts/cup.gd" id="2_ssn6n"]
+
+[node name="Cup_Obj" type="Node2D"]
+
+[node name="Cup" type="Sprite2D" parent="."]
+position = Vector2(1, -44)
+texture = ExtResource("1_7q2t1")
+script = ExtResource("2_ssn6n")
+
+[node name="click detection" type="Button" parent="Cup"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -27.0
+offset_top = -44.0
+offset_right = 27.0
+offset_bottom = 44.0
+
+[connection signal="button_down" from="Cup/click detection" to="Cup" method="_on_click_detection_button_down"]
+[connection signal="button_up" from="Cup/click detection" to="Cup" method="_on_click_detection_button_up"]
