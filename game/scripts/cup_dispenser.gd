@@ -3,8 +3,8 @@ extends Sprite2D
 var scene = load("res://scenes/cup.tscn")
 var cup = scene.instantiate()
 
-func spawn(pos):
-	cup.position = pos
+func spawn_cup():
+	cup = scene.instantiate()
 	add_child(cup)
 
 func _on_press_detection_pressed() -> void:
@@ -12,4 +12,4 @@ func _on_press_detection_pressed() -> void:
 		remove_child(cup)
 		print("be gone")# debug
 	else:
-		spawn(Vector2(1000,0))# spawn a cup in the vector position
+		spawn_cup()

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds1iyocyrsebe"]
+
+[ext_resource type="Texture2D" uid="uid://2wgso60hsdj" path="res://assets/place holders/Main Menu - Place Holder.png" id="1_3xu6n"]
+[ext_resource type="Texture2D" uid="uid://corf4u4tprpvu" path="res://assets/sprites/cups.png" id="1_57caq"]
+[ext_resource type="Script" path="res://scripts/cup_dispenser.gd" id="2_81jp3"]
+
+[node name="Cup dispenser" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.49995, 0)
+scale = Vector2(1.77315, 1)
+texture = ExtResource("1_3xu6n")
+
+[node name="cups" type="Sprite2D" parent="."]
+texture = ExtResource("1_57caq")
+script = ExtResource("2_81jp3")
+
+[node name="press detection" type="Button" parent="cups"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -27.0
+offset_top = -114.0
+offset_right = 27.0
+offset_bottom = 114.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="cups/press detection" to="cups" method="_on_press_detection_pressed"]
+[connection signal="pressed" from="cups/press detection" to="cups/press detection" method="_on_pressed"]
