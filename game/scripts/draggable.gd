@@ -2,13 +2,14 @@
 
 extends Sprite2D
 
-var dragging = false 
+# Start already dragging
+var dragging = true 
 
  # for smooth lock in mouse
 @warning_ignore("unused_parameter")
-func _process(delta):
+func _physics_process(delta):
 	if dragging:
-		position = get_global_mouse_position()
+		global_position = get_global_mouse_position()
 
 # When the cup is being pressed
 func _on_click_detection_button_down() -> void:

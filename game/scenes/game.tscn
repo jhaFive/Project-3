@@ -1,5 +1,27 @@
-[gd_scene format=3 uid="uid://cytkkrscdmnwi"]
+[gd_scene load_steps=4 format=3 uid="uid://cytkkrscdmnwi"]
+
+[ext_resource type="Texture2D" uid="uid://qqut4h32vajm" path="res://assets/sprites/counter.png" id="1_dunqu"]
+[ext_resource type="PackedScene" uid="uid://ds1iyocyrsebe" path="res://scenes/cup_dispenser.tscn" id="2_ak4cs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igmnd"]
+size = Vector2(176, 55)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="BG" type="Node" parent="."]
+
+[node name="Counter" type="Sprite2D" parent="BG"]
+texture = ExtResource("1_dunqu")
+
+[node name="dropArea" type="StaticBody2D" parent="BG" groups=["dropable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/dropArea"]
+position = Vector2(-49, 132.5)
+shape = SubResource("RectangleShape2D_igmnd")
+
+[node name="Containers" type="Node" parent="."]
+
+[node name="Cup dispenser" parent="Containers" instance=ExtResource("2_ak4cs")]

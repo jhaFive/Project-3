@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcf3u2uprdby7"]
 
 [ext_resource type="Texture2D" uid="uid://w26wfwrcf8yi" path="res://assets/sprites/cup.png" id="1_7q2t1"]
-[ext_resource type="Script" path="res://scripts/cup.gd" id="2_ssn6n"]
+[ext_resource type="Script" path="res://scripts/draggable.gd" id="2_ssn6n"]
 
 [node name="Cup_Obj" type="Node2D"]
 
 [node name="Cup" type="Sprite2D" parent="."]
-position = Vector2(1, -44)
+visibility_layer = 4
 texture = ExtResource("1_7q2t1")
 script = ExtResource("2_ssn6n")
 

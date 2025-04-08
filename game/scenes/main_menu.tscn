@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://civpltgqqrbpw"]
 
-[ext_resource type="Script" uid="uid://csc0qjhxm1pi3" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://2wgso60hsdj" path="res://assets/place holders/Main Menu - Place Holder.png" id="1_l6cm7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
@@ -72,9 +72,9 @@ theme_override_constants/separation = 15
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
@@ -86,9 +86,9 @@ text = "Start Game"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/focus = SubResource("StyleBoxEmpty_l6cm7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
