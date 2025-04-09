@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1ehvf7ubm4mu"
-path="res://.godot/imported/money.png-09280174f27a4d805bcaf435b00c2262.ctex"
+uid="uid://cv30dj5f55mwd"
+path="res://.godot/imported/whipped_cream_topping.png-8e0c6d3f93a585e3c1919633d5cc7146.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/money.png"
-dest_files=["res://.godot/imported/money.png-09280174f27a4d805bcaf435b00c2262.ctex"]
+source_file="res://assets/place holders/whipped_cream_topping.png"
+dest_files=["res://.godot/imported/whipped_cream_topping.png-8e0c6d3f93a585e3c1919633d5cc7146.ctex"]
 
 [params]
 

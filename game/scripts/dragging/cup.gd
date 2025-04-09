@@ -1,13 +1,11 @@
 # makes it possible to drag the cup object
-
 extends Sprite2D
-
 # Start already dragging
 var dragging = true 
 
  # for smooth lock in mouse
 @warning_ignore("unused_parameter")
-func _physics_process(delta):
+func _process(delta):
 	if dragging:
 		global_position = get_global_mouse_position()
 

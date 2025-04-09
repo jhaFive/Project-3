@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ma0ruxh61r8n"
-path="res://.godot/imported/cat.png-6b90c612be3955b68778303b3edc0dc5.ctex"
+uid="uid://daaw0s286hqrf"
+path="res://.godot/imported/black_boba.png-c8b3cf72975010d728f18fbdafd1373f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cat.png"
-dest_files=["res://.godot/imported/cat.png-6b90c612be3955b68778303b3edc0dc5.ctex"]
+source_file="res://assets/place holders/black_boba.png"
+dest_files=["res://.godot/imported/black_boba.png-c8b3cf72975010d728f18fbdafd1373f.ctex"]
 
 [params]
 

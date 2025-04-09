@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dimio0csx5qwu"
-path="res://.godot/imported/strawberries_topping.png-21ec65e7b71a460e2ed593a6dbb05a44.ctex"
+uid="uid://ma0ruxh61r8n"
+path="res://.godot/imported/cat.png-b409a4274f5dc31078a50e3e892f6d52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/strawberries_topping.png"
-dest_files=["res://.godot/imported/strawberries_topping.png-21ec65e7b71a460e2ed593a6dbb05a44.ctex"]
+source_file="res://assets/place holders/cat.png"
+dest_files=["res://.godot/imported/cat.png-b409a4274f5dc31078a50e3e892f6d52.ctex"]
 
 [params]
 

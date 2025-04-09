@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daaw0s286hqrf"
-path="res://.godot/imported/black_boba.png-2e214e028835e232d5207bc0c5130d99.ctex"
+uid="uid://dimio0csx5qwu"
+path="res://.godot/imported/strawberries_topping.png-dc649dd888a9bde71f8b67aa7a1e5b50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/black_boba.png"
-dest_files=["res://.godot/imported/black_boba.png-2e214e028835e232d5207bc0c5130d99.ctex"]
+source_file="res://assets/place holders/strawberries_topping.png"
+dest_files=["res://.godot/imported/strawberries_topping.png-dc649dd888a9bde71f8b67aa7a1e5b50.ctex"]
 
 [params]
 

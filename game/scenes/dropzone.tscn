@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://jdey0e087leh"]
+
+[ext_resource type="Script" path="res://scripts/dragging/dropzone.gd" id="1_74xey"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7krjg"]
+radius = 45.0
+height = 140.0
+
+[node name="dropzone" type="StaticBody2D" groups=["dropable"]]
+script = ExtResource("1_74xey")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["dropable"]]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_7krjg")
+
+[node name="ColorRect" type="ColorRect" parent="." groups=["dropable"]]
+offset_left = -71.0
+offset_top = -46.0
+offset_right = 71.0
+offset_bottom = 46.0

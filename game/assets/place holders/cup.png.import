@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://corf4u4tprpvu"
-path="res://.godot/imported/cups.png-e03f045ca30f74a2a51c747f9044c20b.ctex"
+uid="uid://w26wfwrcf8yi"
+path="res://.godot/imported/cup.png-6c2a15f8b5e4645447658abc298b3d3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cups.png"
-dest_files=["res://.godot/imported/cups.png-e03f045ca30f74a2a51c747f9044c20b.ctex"]
+source_file="res://assets/place holders/cup.png"
+dest_files=["res://.godot/imported/cup.png-6c2a15f8b5e4645447658abc298b3d3d.ctex"]
 
 [params]
 

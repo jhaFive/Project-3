@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cceda8gja1o8t"
-path="res://.godot/imported/cheese_foam_topping.png-69977b95fa981afdb5c0bf8a88c1b90c.ctex"
+path="res://.godot/imported/cheese_foam_topping.png-07200458b2c188375ae78c50e66f4175.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cheese_foam_topping.png"
-dest_files=["res://.godot/imported/cheese_foam_topping.png-69977b95fa981afdb5c0bf8a88c1b90c.ctex"]
+source_file="res://assets/place holders/cheese_foam_topping.png"
+dest_files=["res://.godot/imported/cheese_foam_topping.png-07200458b2c188375ae78c50e66f4175.ctex"]
 
 [params]
 

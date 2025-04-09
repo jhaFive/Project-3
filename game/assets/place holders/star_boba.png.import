@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy1q5qipvrlns"
-path="res://.godot/imported/strawberry_liquid.png-e12499cbe1c9950b72a31782fd50ee1e.ctex"
+uid="uid://b3davke1phdod"
+path="res://.godot/imported/star_boba.png-17c5be5c19e0b32b91d78e00bde50695.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/strawberry_liquid.png"
-dest_files=["res://.godot/imported/strawberry_liquid.png-e12499cbe1c9950b72a31782fd50ee1e.ctex"]
+source_file="res://assets/place holders/star_boba.png"
+dest_files=["res://.godot/imported/star_boba.png-17c5be5c19e0b32b91d78e00bde50695.ctex"]
 
 [params]
 

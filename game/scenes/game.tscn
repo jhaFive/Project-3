@@ -1,10 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cytkkrscdmnwi"]
 
-[ext_resource type="Texture2D" uid="uid://qqut4h32vajm" path="res://assets/sprites/counter.png" id="1_dunqu"]
+[ext_resource type="Texture2D" uid="uid://qqut4h32vajm" path="res://assets/place holders/counter.png" id="1_dunqu"]
 [ext_resource type="PackedScene" uid="uid://ds1iyocyrsebe" path="res://scenes/cup_dispenser.tscn" id="2_ak4cs"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_igmnd"]
-size = Vector2(176, 55)
+[ext_resource type="PackedScene" uid="uid://jdey0e087leh" path="res://scenes/dropzone.tscn" id="2_ap0g3"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,11 +14,8 @@ zoom = Vector2(3, 3)
 [node name="Counter" type="Sprite2D" parent="BG"]
 texture = ExtResource("1_dunqu")
 
-[node name="dropArea" type="StaticBody2D" parent="BG" groups=["dropable"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BG/dropArea"]
-position = Vector2(-49, 132.5)
-shape = SubResource("RectangleShape2D_igmnd")
+[node name="dropzone" parent="BG" instance=ExtResource("2_ap0g3")]
+position = Vector2(-45, 131)
 
 [node name="Containers" type="Node" parent="."]
 

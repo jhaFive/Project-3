@@ -1,10 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://ds1iyocyrsebe"]
 
-[ext_resource type="Texture2D" uid="uid://corf4u4tprpvu" path="res://assets/sprites/cups.png" id="1_57caq"]
-[ext_resource type="Script" path="res://scripts/container.gd" id="2_81jp3"]
+[ext_resource type="Texture2D" uid="uid://corf4u4tprpvu" path="res://assets/place holders/cups.png" id="1_57caq"]
+[ext_resource type="Script" path="res://scripts/dragging/cup_dispenser.gd" id="2_81jp3"]
 
 [node name="Cup dispenser" type="Node2D"]
-position = Vector2(100, 0)
 
 [node name="cups" type="Sprite2D" parent="."]
 visibility_layer = 2
