@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfgcyvh772g47"]
+
+[ext_resource type="Script" uid="uid://dvqffpmsmea0r" path="res://scripts/dragging/star.gd" id="1_c5ds5"]
+[ext_resource type="Texture2D" uid="uid://tsucgvabxdot" path="res://art/sprites/StarBoba.png" id="1_x85a1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ds5"]
+size = Vector2(34, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5b73"]
+size = Vector2(30, 39)
+
+[node name="Star" type="CharacterBody2D"]
+script = ExtResource("1_c5ds5")
+
+[node name="StarSprite" type="Sprite2D" parent="."]
+visibility_layer = 4
+texture = ExtResource("1_x85a1")
+
+[node name="click detection" type="Button" parent="StarSprite"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -27.0
+offset_top = -44.0
+offset_right = 27.0
+offset_bottom = 44.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="." groups=["star"]]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_c5ds5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_q5b73")
+
+[connection signal="button_down" from="StarSprite/click detection" to="." method="_on_click_detection_button_down"]
+[connection signal="button_up" from="StarSprite/click detection" to="." method="_on_click_detection_button_up"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

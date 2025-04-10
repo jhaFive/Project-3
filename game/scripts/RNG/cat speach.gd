@@ -1,10 +1,15 @@
 extends Node
 
+signal drink_order 
+
 var lboba = ['bo0','bo1','bo2'] #0 = black, 1 = star, 2 = jelly
 var ltea = ['te0','te1','te2'] #0 = matcha, 1 = strawberry, 2 = brown
 var ltop = ['to0','to1','to2'] #0 = cream, 1 = foam, 2 = berries
 
+@onready var main = get_parent()
+
 func _ready() -> void:
+	
 	randomize()
 	
 	# selects the item

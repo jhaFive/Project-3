@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://by6enp1a1o7w6"]
 
-[ext_resource type="Script" path="res://scenes/draggables/toppings/pearl.gd" id="1_jb3cf"]
+[ext_resource type="Script" uid="uid://baipmdxfu8i6b" path="res://scripts/dragging/pearl.gd" id="1_jb3cf"]
 [ext_resource type="Texture2D" uid="uid://cqxp0kaar3fff" path="res://art/sprites/NewPearl.png" id="2_1s0jb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lta3s"]
@@ -24,7 +24,8 @@ offset_right = 27.0
 offset_bottom = 44.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Area2D" type="Area2D" parent="." groups=["Cup"]]
+[node name="Area2D" type="Area2D" parent="." groups=["pearl"]]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 2)

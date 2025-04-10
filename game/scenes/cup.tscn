@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dcf3u2uprdby7"]
 
 [ext_resource type="Texture2D" uid="uid://w26wfwrcf8yi" path="res://art/place holders/cup.png" id="1_7q2t1"]
-[ext_resource type="Script" path="res://scripts/dragging/cup.gd" id="1_iw5ct"]
+[ext_resource type="Script" uid="uid://bgntdux6vhg5m" path="res://scripts/dragging/cup.gd" id="1_iw5ct"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0y5yv"]
 size = Vector2(52, 89)
