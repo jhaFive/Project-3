@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 signal cup_delivered
 # Start already dragging
+var draggable = true
 var dragging = true 
 var in_dropzone: bool = false
 
@@ -17,18 +18,21 @@ func _process(delta):
 		global_position = get_global_mouse_position()
 	if in_dropzone:
 		if dragging == false:
+			draggable = false
 			emit_signal("cup_delivered")
 			global_position = end_location_marker.global_position
 
 # When the cup is being pressed
 func _on_click_detection_button_down() -> void:
-	dragging = true
-	Global.is_dragging = true
+	if draggable:
+		dragging = true
+		Global.is_dragging = true
 
 # When the cup is being NOT pressed
 func _on_click_detection_button_up() -> void:
-	dragging = false 
-	Global.is_dragging = false
+	if draggable:
+		dragging = false 
+		Global.is_dragging = false
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

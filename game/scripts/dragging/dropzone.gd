@@ -5,7 +5,6 @@ extends StaticBody2D
 var has_cup: bool = false
 
 func _ready():
-	#cup.cup_delivered.connect(_cup_check)
 	modulate = Color(Color.MEDIUM_PURPLE, 0.7)
 
 func _process(delta):
@@ -16,3 +15,7 @@ func _process(delta):
 
 func _cup_check():
 	has_cup = true
+
+func _on_area_2d_body_entered(body) -> void:
+	if body.is_in_group("Cup"):
+		body.cup_delivered.connect(_cup_check)

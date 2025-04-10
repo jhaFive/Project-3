@@ -13,8 +13,7 @@ func spawn_cup():
 func _on_press_detection_pressed() -> void:
 	var target_destroy_cup = get_parent().find_child("Cup_Obj")
 	if not cup_available: # checks if a cup is already on the screen
-		main.remove_child(find_child("Cup_Obj"))
-		print("be gone")# debug
+		pass
 	else:
 		cup_available = false
 		spawn_cup()

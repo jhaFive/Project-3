@@ -4,6 +4,7 @@ signal pearl_delivered
 # Start already dragging
 var dragging = false
 var in_dropzone: bool = false
+var past_location: Vector2
 
 var spawn_location: Vector2
 @onready var dropzone = get_parent().find_child("dropzone")
@@ -11,7 +12,8 @@ var spawn_location: Vector2
  # for smooth lock in mouse
 @warning_ignore("unused_parameter")
 func _ready() -> void:
-	global_position = spawn_location
+	past_location = Vector2(self.position)
+
 func _process(delta):
 	if dragging:
 		global_position = get_global_mouse_position()
@@ -27,6 +29,8 @@ func _on_click_detection_button_down() -> void:
 
 # When the cup is being NOT pressed
 func _on_click_detection_button_up() -> void:
+	if not in_dropzone:
+		global_position = past_location
 	dragging = false 
 	Global.is_dragging = false
 
