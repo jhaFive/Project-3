@@ -1,12 +1,12 @@
-# makes it possible to drag the cup object
 extends CharacterBody2D
 
-signal cup_delivered
+signal pearl_delivered
 # Start already dragging
-var dragging = true 
+var dragging = false
 var in_dropzone: bool = false
 
 var spawn_location: Vector2
+@onready var dropzone = get_parent().find_child("dropzone")
 @onready var end_location_marker = get_parent().find_child("dropzone")
  # for smooth lock in mouse
 @warning_ignore("unused_parameter")
@@ -15,9 +15,9 @@ func _ready() -> void:
 func _process(delta):
 	if dragging:
 		global_position = get_global_mouse_position()
-	if in_dropzone:
-		if dragging == false:
-			emit_signal("cup_delivered")
+	if in_dropzone and not dragging:
+		if dropzone.has_cup:
+			emit_signal("pearl_delivered")
 			global_position = end_location_marker.global_position
 
 # When the cup is being pressed

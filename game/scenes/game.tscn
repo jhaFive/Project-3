@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cytkkrscdmnwi"]
+[gd_scene load_steps=5 format=3 uid="uid://cytkkrscdmnwi"]
 
-[ext_resource type="Texture2D" uid="uid://qqut4h32vajm" path="res://assets/place holders/counter.png" id="1_dunqu"]
+[ext_resource type="Texture2D" uid="uid://qqut4h32vajm" path="res://art/place holders/counter.png" id="1_dunqu"]
 [ext_resource type="PackedScene" uid="uid://ds1iyocyrsebe" path="res://scenes/cup_dispenser.tscn" id="2_ak4cs"]
-[ext_resource type="PackedScene" uid="uid://jdey0e087leh" path="res://scenes/dropzone.tscn" id="2_ap0g3"]
+[ext_resource type="PackedScene" uid="uid://i4kdvs1c8g3w" path="res://scenes/dropzone.tscn" id="2_ap0g3"]
+[ext_resource type="PackedScene" uid="uid://by6enp1a1o7w6" path="res://scenes/draggables/toppings/Pearl.tscn" id="4_pcabf"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,9 +15,16 @@ zoom = Vector2(3, 3)
 [node name="Counter" type="Sprite2D" parent="BG"]
 texture = ExtResource("1_dunqu")
 
-[node name="dropzone" parent="BG" instance=ExtResource("2_ap0g3")]
-position = Vector2(-45, 131)
-
 [node name="Containers" type="Node" parent="."]
 
 [node name="Cup dispenser" parent="Containers" instance=ExtResource("2_ak4cs")]
+position = Vector2(100, 0)
+
+[node name="dropzone" parent="Containers" instance=ExtResource("2_ap0g3")]
+position = Vector2(-45, 131)
+
+[node name="dropzone_m" type="Marker2D" parent="Containers"]
+position = Vector2(-39, 59)
+
+[node name="Node2D" parent="Containers" instance=ExtResource("4_pcabf")]
+position = Vector2(-249, -99)

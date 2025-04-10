@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnxjd8pecgoon"
-path="res://.godot/imported/brown_sugar_liquid.png-6e4d2eab2eb011994762d5f521b1a554.ctex"
+uid="uid://tsucgvabxdot"
+path="res://.godot/imported/StarBoba.png-a9f6f5d24e19fdf43074f0d422f78ac1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/place holders/brown_sugar_liquid.png"
-dest_files=["res://.godot/imported/brown_sugar_liquid.png-6e4d2eab2eb011994762d5f521b1a554.ctex"]
+source_file="res://art/sprites/StarBoba.png"
+dest_files=["res://.godot/imported/StarBoba.png-a9f6f5d24e19fdf43074f0d422f78ac1.ctex"]
 
 [params]
 

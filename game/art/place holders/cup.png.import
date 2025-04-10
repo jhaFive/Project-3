@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv30dj5f55mwd"
-path="res://.godot/imported/whipped_cream_topping.png-8e0c6d3f93a585e3c1919633d5cc7146.ctex"
+uid="uid://w26wfwrcf8yi"
+path="res://.godot/imported/cup.png-add909e48a3d5e9e05f4dc0065213ef2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/place holders/whipped_cream_topping.png"
-dest_files=["res://.godot/imported/whipped_cream_topping.png-8e0c6d3f93a585e3c1919633d5cc7146.ctex"]
+source_file="res://art/place holders/cup.png"
+dest_files=["res://.godot/imported/cup.png-add909e48a3d5e9e05f4dc0065213ef2.ctex"]
 
 [params]
 

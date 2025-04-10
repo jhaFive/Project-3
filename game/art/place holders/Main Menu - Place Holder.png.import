@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qqut4h32vajm"
-path="res://.godot/imported/counter.png-250d30d979caf756fd77432b85d0070b.ctex"
+uid="uid://2wgso60hsdj"
+path="res://.godot/imported/Main Menu - Place Holder.png-87c1fbd71a33fa5767252f59a62fd26c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/place holders/counter.png"
-dest_files=["res://.godot/imported/counter.png-250d30d979caf756fd77432b85d0070b.ctex"]
+source_file="res://art/place holders/Main Menu - Place Holder.png"
+dest_files=["res://.godot/imported/Main Menu - Place Holder.png-87c1fbd71a33fa5767252f59a62fd26c.ctex"]
 
 [params]
 

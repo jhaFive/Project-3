@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy1q5qipvrlns"
-path="res://.godot/imported/strawberry_liquid.png-028de1e5ed05f3dc0f64b37bc08e4376.ctex"
+uid="uid://cqxp0kaar3fff"
+path="res://.godot/imported/NewPearl.png-8b0588b1639a599543cdc9d3e0aa19a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/place holders/strawberry_liquid.png"
-dest_files=["res://.godot/imported/strawberry_liquid.png-028de1e5ed05f3dc0f64b37bc08e4376.ctex"]
+source_file="res://art/sprites/NewPearl.png"
+dest_files=["res://.godot/imported/NewPearl.png-8b0588b1639a599543cdc9d3e0aa19a8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1dshvcuncest"
-path="res://.godot/imported/Pearls.png-99c35485d2a48022a7560659b894b0af.ctex"
+uid="uid://qqut4h32vajm"
+path="res://.godot/imported/counter.png-d40a6596eef15d0f489b2886199a9718.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Pearls.png"
-dest_files=["res://.godot/imported/Pearls.png-99c35485d2a48022a7560659b894b0af.ctex"]
+source_file="res://art/place holders/counter.png"
+dest_files=["res://.godot/imported/counter.png-d40a6596eef15d0f489b2886199a9718.ctex"]
 
 [params]
 

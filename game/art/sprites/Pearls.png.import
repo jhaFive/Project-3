@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp2fvd3pbo403"
-path="res://.godot/imported/JellyBoba.png-9479a8e2f3786e077daff7851469583b.ctex"
+uid="uid://d1dshvcuncest"
+path="res://.godot/imported/Pearls.png-311885353e2b1e4ab024903e1faae30b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/JellyBoba.png"
-dest_files=["res://.godot/imported/JellyBoba.png-9479a8e2f3786e077daff7851469583b.ctex"]
+source_file="res://art/sprites/Pearls.png"
+dest_files=["res://.godot/imported/Pearls.png-311885353e2b1e4ab024903e1faae30b.ctex"]
 
 [params]
 

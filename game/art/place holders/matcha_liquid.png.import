@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://corf4u4tprpvu"
-path="res://.godot/imported/cups.png-2feeb5fc018b725941d54f80ef1135f3.ctex"
+uid="uid://d4bqcf4tyalwg"
+path="res://.godot/imported/matcha_liquid.png-f829632c82e9695d4c1d8193c177ffe8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/place holders/cups.png"
-dest_files=["res://.godot/imported/cups.png-2feeb5fc018b725941d54f80ef1135f3.ctex"]
+source_file="res://art/place holders/matcha_liquid.png"
+dest_files=["res://.godot/imported/matcha_liquid.png-f829632c82e9695d4c1d8193c177ffe8.ctex"]
 
 [params]
 

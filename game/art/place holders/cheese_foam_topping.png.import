@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tsucgvabxdot"
-path="res://.godot/imported/StarBoba.png-d68ecaea74af6b302f475d91020f321e.ctex"
+uid="uid://cceda8gja1o8t"
+path="res://.godot/imported/cheese_foam_topping.png-b63e43c3c3fb763339a426a33534236e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/StarBoba.png"
-dest_files=["res://.godot/imported/StarBoba.png-d68ecaea74af6b302f475d91020f321e.ctex"]
+source_file="res://art/place holders/cheese_foam_topping.png"
+dest_files=["res://.godot/imported/cheese_foam_topping.png-b63e43c3c3fb763339a426a33534236e.ctex"]
 
 [params]
 

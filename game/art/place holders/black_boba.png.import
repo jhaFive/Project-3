@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1ehvf7ubm4mu"
-path="res://.godot/imported/money.png-06ab2019f0ec2a794a77c685d664bc71.ctex"
+uid="uid://daaw0s286hqrf"
+path="res://.godot/imported/black_boba.png-baf5a7348ac19f399822b09129a501d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/place holders/money.png"
-dest_files=["res://.godot/imported/money.png-06ab2019f0ec2a794a77c685d664bc71.ctex"]
+source_file="res://art/place holders/black_boba.png"
+dest_files=["res://.godot/imported/black_boba.png-baf5a7348ac19f399822b09129a501d0.ctex"]
 
 [params]
 

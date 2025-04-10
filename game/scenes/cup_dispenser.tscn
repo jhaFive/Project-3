@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://ds1iyocyrsebe"]
 
-[ext_resource type="Texture2D" uid="uid://corf4u4tprpvu" path="res://assets/place holders/cups.png" id="1_57caq"]
+[ext_resource type="Texture2D" uid="uid://corf4u4tprpvu" path="res://art/place holders/cups.png" id="1_57caq"]
 [ext_resource type="Script" path="res://scripts/dragging/cup_dispenser.gd" id="2_81jp3"]
 
 [node name="Cup dispenser" type="Node2D"]
+script = ExtResource("2_81jp3")
 
 [node name="cups" type="Sprite2D" parent="."]
 visibility_layer = 2
 position = Vector2(-1.43051e-06, 0)
 texture = ExtResource("1_57caq")
-script = ExtResource("2_81jp3")
 
 [node name="press detection" type="Button" parent="cups"]
 self_modulate = Color(1, 1, 1, 0)
@@ -25,5 +25,8 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="cups/press detection" to="cups" method="_on_press_detection_pressed"]
+[node name="SpawnPoint" type="Marker2D" parent="."]
+position = Vector2(-77, 0)
+
+[connection signal="pressed" from="cups/press detection" to="." method="_on_press_detection_pressed"]
 [connection signal="pressed" from="cups/press detection" to="cups/press detection" method="_on_pressed"]
