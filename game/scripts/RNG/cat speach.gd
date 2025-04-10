@@ -19,24 +19,24 @@ func _ready() -> void:
 	
 	# changes the placeholder texture to the correct boba
 	if boba == 'bo0':
-		$Sprite2D/Boba.texture=ResourceLoader.load("res://assets/place holders/black_boba.png")
+		$Sprite2D/Boba.texture=ResourceLoader.load("res://art/place holders/black_boba.png")
 	elif boba == 'bo1':
-		$Sprite2D/Boba.texture=ResourceLoader.load("res://assets/place holders/star_boba.png")
+		$Sprite2D/Boba.texture=ResourceLoader.load("res://art/place holders/star_boba.png")
 	elif boba == 'bo2':
-		$Sprite2D/Boba.texture=ResourceLoader.load("res://assets/place holders/jelly_boba.png")
+		$Sprite2D/Boba.texture=ResourceLoader.load("res://art/place holders/jelly_boba.png")
 	
 	# changes the placeholder texture to the correct tea
 	if tea == 'te0':
-		$Sprite2D/Tea.texture=ResourceLoader.load("res://assets/place holders/te0.png")
+		$Sprite2D/Tea.texture=ResourceLoader.load("res://art/place holders/te0.png")
 	elif tea == 'te1':
-		$Sprite2D/Tea.texture=ResourceLoader.load("res://assets/place holders/te1.png")
+		$Sprite2D/Tea.texture=ResourceLoader.load("res://art/place holders/te1.png")
 	elif tea == 'te2':
-		$Sprite2D/Tea.texture=ResourceLoader.load("res://assets/place holders/te2.png")
+		$Sprite2D/Tea.texture=ResourceLoader.load("res://art/place holders/te2.png")
 	
 	# changes the placeholder texture to the correct top
 	if top == 'to0':
-		$Sprite2D/Top.texture=ResourceLoader.load("res://assets/place holders/to0.png")
+		$Sprite2D/Top.texture=ResourceLoader.load("res://art/place holders/to0.png")
 	elif top == 'to1':
-		$Sprite2D/Top.texture=ResourceLoader.load("res://assets/place holders/to1.png")
+		$Sprite2D/Top.texture=ResourceLoader.load("res://art/place holders/to1.png")
 	elif top == 'to2':
-		$Sprite2D/Top.texture=ResourceLoader.load("res://assets/place holders/to2.png")
+		$Sprite2D/Top.texture=ResourceLoader.load("res://art/place holders/to2.png")
