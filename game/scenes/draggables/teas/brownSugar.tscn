@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqh60unqv33dr"]
+
+[ext_resource type="Script" uid="uid://bm45qwsc72dt2" path="res://scripts/dragging/brownSugar.gd" id="1_hlmgj"]
+[ext_resource type="Texture2D" uid="uid://eqvexh0xabue" path="res://art/sprites/BrownSugarIcon.png" id="2_frj2s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3wm1"]
+size = Vector2(60, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfrpj"]
+size = Vector2(60, 60)
+
+[node name="BrownSugar" type="CharacterBody2D"]
+script = ExtResource("1_hlmgj")
+
+[node name="brownSugarSprite" type="Sprite2D" parent="." groups=["brownSugar"]]
+visibility_layer = 4
+texture = ExtResource("2_frj2s")
+
+[node name="click detection" type="Button" parent="brownSugarSprite"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -37.0
+offset_top = -77.0
+offset_right = 37.0
+offset_bottom = 136.0
+
+[node name="Area2D" type="Area2D" parent="." groups=["brownSugar"]]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_u3wm1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gfrpj")
+
+[connection signal="button_down" from="brownSugarSprite/click detection" to="." method="_on_click_detection_button_down"]
+[connection signal="button_up" from="brownSugarSprite/click detection" to="." method="_on_click_detection_button_up"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

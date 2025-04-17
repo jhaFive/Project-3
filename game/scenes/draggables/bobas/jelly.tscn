@@ -9,7 +9,7 @@ size = Vector2(34, 38)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rckg2"]
 size = Vector2(30, 39)
 
-[node name="Jelly" type="CharacterBody2D" groups=["jelly"]]
+[node name="Jelly" type="CharacterBody2D"]
 script = ExtResource("1_hba4i")
 
 [node name="JellySprite" type="Sprite2D" parent="."]

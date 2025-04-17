@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://c30yd7j2t3c8n"]
+
+[ext_resource type="Script" uid="uid://8kcnto32by46" path="res://scripts/dragging/cheeseFoam.gd" id="1_5wavt"]
+[ext_resource type="Texture2D" uid="uid://cceda8gja1o8t" path="res://art/place holders/cheese_foam_topping.png" id="2_d62r3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hba4i"]
+size = Vector2(50, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rckg2"]
+size = Vector2(50, 88)
+
+[node name="CheeseFoam" type="CharacterBody2D"]
+script = ExtResource("1_5wavt")
+
+[node name="cheeseFoamSprite" type="Sprite2D" parent="."]
+visibility_layer = 4
+texture = ExtResource("2_d62r3")
+
+[node name="click detection" type="Button" parent="cheeseFoamSprite"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = -0.113636
+anchor_top = -0.179856
+anchor_right = -0.113636
+anchor_bottom = 0.18705
+offset_left = -27.0
+offset_top = -44.0
+offset_right = 27.0
+offset_bottom = 44.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="." groups=["cheeseFoam"]]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_hba4i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rckg2")
+
+[connection signal="button_down" from="cheeseFoamSprite/click detection" to="." method="_on_click_detection_button_down"]
+[connection signal="button_up" from="cheeseFoamSprite/click detection" to="." method="_on_click_detection_button_up"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

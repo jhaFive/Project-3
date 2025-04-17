@@ -7,6 +7,12 @@ signal reset
 @onready var new_pearl = $NewPearl
 @onready var star = $Star
 @onready var jelly = $Jelly
+@onready var matcha = $Matcha
+@onready var strawberry = $Strawberry
+@onready var brownSugar = $BrownSugar
+@onready var whipCream = $WhipCream
+@onready var cheeseFoam = $CheeseFoam
+@onready var strawberries = $Strawberries
 
 var has_cup: bool = false
 
@@ -20,9 +26,21 @@ var topping_available: bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	clear_button.clear_ingredients.connect(_clear_drink)
+	
+	# boba
 	new_pearl.pearl_delivered.connect(_update_drink)
 	star.star_delivered.connect(_update_drink)
 	jelly.jelly_delivered.connect(_update_drink)
+	
+	# tea
+	matcha.matcha_delivered.connect(_update_drink)
+	strawberry.strawberry_delivered.connect(_update_drink)
+	brownSugar.brownSugar_delivered.connect(_update_drink)
+	
+	# topping
+	whipCream.whipCream_delivered.connect(_update_drink)
+	cheeseFoam.cheeseFoam_delivered.connect(_update_drink)
+	strawberries.strawberries_delivered.connect(_update_drink)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

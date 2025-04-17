@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-signal jelly_delivered
+signal whipCream_delivered
 
 var dragging = false
 var in_dropzone: bool = false
@@ -33,8 +33,8 @@ func _on_click_detection_button_up() -> void:
 	dragging = false 
 	Global.is_dragging = false
 	if in_dropzone and not dragging:
-		if dropzone.has_cup and workstation.boba_available:
-			emit_signal("jelly_delivered", "boba", "jelly")
+		if dropzone.has_cup and workstation.topping_available:
+			emit_signal("whipCream_delivered", "topping", "whipCream")
 			global_position = end_location_marker.global_position
 		else:
 			global_position = past_location

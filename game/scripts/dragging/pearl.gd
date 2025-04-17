@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 signal pearl_delivered
-# Start already dragging
+
 var dragging = false
 var in_dropzone: bool = false
 var past_location: Vector2
