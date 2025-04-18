@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://civpltgqqrbpw"]
+[gd_scene load_steps=9 format=3 uid="uid://civpltgqqrbpw"]
 
 [ext_resource type="Script" uid="uid://csc0qjhxm1pi3" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://2wgso60hsdj" path="res://art/place holders/Main Menu - Place Holder.png" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://c3ktxtbehxgco" path="res://art/place holders/menu_placeholder.jpg" id="3_bqqt6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
 texture = ExtResource("1_l6cm7")
@@ -52,6 +53,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ekxnf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Artwork"]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(3, 3)
+texture = ExtResource("3_bqqt6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

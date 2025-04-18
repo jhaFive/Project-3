@@ -1,8 +1,10 @@
 extends Node
 
 signal reset
+signal newOrder
 
 @onready var clear_button = get_parent().find_child("ClearButton")
+@onready var send_order_button = get_parent().find_child("SendOrderButton")
 @onready var dropzone = $dropzone
 
 # These variables keep track of what can be dragged in the cup
@@ -16,6 +18,11 @@ signal reset
 @onready var cheeseFoam = $CheeseFoam
 @onready var strawberries = $Strawberries
 
+# For scoring
+@onready var score_label = $Score
+var score = 0
+
+var correct_order: bool = false
 var has_cup: bool = false
 
 # variables deleted as they have been converted to global
@@ -28,6 +35,7 @@ var topping_available: bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	clear_button.clear_ingredients.connect(_clear_drink)
+	send_order_button.send_order.connect(_send_order)
 	
 	# These update the graphics and keeps track of what is dragged to the cup
 	# This section handles the boba ingredients
@@ -65,7 +73,7 @@ func _update_drink(type: String, ingredient: String):
 
 func _clear_drink():
 	# where tf is this signal being recived?
-	# I'm not entirely sure, I'll be sure to ask about this part
+	# This signal is being recieved by the ingredients and cups to reset their positions back to their original places
 	emit_signal("reset")
 	
 	# Why are we using strings for a variable that will only hold 1 value at a time again?
@@ -77,3 +85,55 @@ func _clear_drink():
 	boba_available = true
 	tea_available = true
 	topping_available = true
+
+# Checks if current drink matches the current order, resets the station, and creates a new order	
+func _send_order():
+	var correct_boba: bool = false
+	var correct_tea: bool = false
+	var correct_topping: bool = false
+	
+	# Matches drink variables to order variables
+	if ((Global.current_boba == "pearl") && (Global.boba == 'bo0')) || ((Global.current_boba == "star") && (Global.boba == 'bo1')) || ((Global.current_boba == "jelly") && (Global.boba == 'bo2')):
+		correct_boba = true
+
+	if ((Global.current_tea == "matcha") && (Global.tea == 'te0')) || ((Global.current_tea == "strawberry") && (Global.tea == 'te1')) || ((Global.current_tea == "brownSugar") && (Global.tea == 'te2')):
+		correct_tea = true
+
+	if ((Global.current_topping == "whipCream") && (Global.top == 'to0')) || ((Global.current_topping == "cheeseFoam") && (Global.top == 'to1')) || ((Global.current_topping == "strawberries") && (Global.top == 'to2')):
+		correct_topping = true
+	
+	# Checks for correct order	
+	if correct_boba && correct_tea && correct_topping:
+		correct_order = true
+	else:
+		correct_order = false
+	
+	_update_point(correct_order)
+	
+	# testing
+	print("\nboba " + str(correct_boba))
+	print("tea " + str(correct_tea))
+	print("topping " + str(correct_topping))
+	print("order " + str(correct_order))
+	
+	# Generates a new order
+	emit_signal("newOrder")
+
+	# Resets station	
+	emit_signal("reset")
+	
+	Global.current_boba = str("NOTHING")
+	Global.current_tea = str("NOTHING")
+	Global.current_topping = str("NOTHING")
+	
+	boba_available = true
+	tea_available = true
+	topping_available = true
+	
+func _update_point(correct: bool):
+	if correct:
+		score += 100
+		score_label.text = "Score: " + str(score) + "\nCorrect :D"
+	else:
+		score -= 100
+		score_label.text = "Score: " + str(score) + "\nWrong D:"

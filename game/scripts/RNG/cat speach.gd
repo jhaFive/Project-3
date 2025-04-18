@@ -7,10 +7,14 @@ var lboba = ['bo0','bo1','bo2'] #0 = black, 1 = star, 2 = jelly
 var ltea = ['te0','te1','te2'] #0 = matcha, 1 = strawberry, 2 = brown
 var ltop = ['to0','to1','to2'] #0 = cream, 1 = foam, 2 = berries
 
-@onready var main = get_parent()
+@onready var workstation = get_parent().find_child("WorkStation")
 
+# Moved order picker to separate function
 func _ready() -> void:
-	
+	workstation.newOrder.connect(_new_order)
+	_new_order()
+
+func _new_order():
 	randomize()
 	
 	# selects the item
@@ -46,3 +50,4 @@ func _ready() -> void:
 		$Sprite2D/Top.texture=ResourceLoader.load("res://art/place holders/cheese_foam_topping.png")
 	elif Global.top == 'to2':
 		$Sprite2D/Top.texture=ResourceLoader.load("res://art/place holders/strawberries_topping.png")
+	
