@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hxks71xhgjld"
+path="res://.godot/imported/04. bolkmar__filling-cup-with-water.wav-cc27fee92590d6aca19b87f6c446e725.sample"
+
+[deps]
+
+source_file="res://art/audio/04. bolkmar__filling-cup-with-water.wav"
+dest_files=["res://.godot/imported/04. bolkmar__filling-cup-with-water.wav-cc27fee92590d6aca19b87f6c446e725.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

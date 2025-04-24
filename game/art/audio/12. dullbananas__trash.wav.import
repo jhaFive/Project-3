@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://sg3ethu3u5qp"
+path="res://.godot/imported/12. dullbananas__trash.wav-bd33393866bd59fce3bc24a4189330d7.sample"
+
+[deps]
+
+source_file="res://art/audio/12. dullbananas__trash.wav"
+dest_files=["res://.godot/imported/12. dullbananas__trash.wav-bd33393866bd59fce3bc24a4189330d7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

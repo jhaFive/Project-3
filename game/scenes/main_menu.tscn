@@ -54,8 +54,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_ekxnf")
 
+[node name="Label" type="Label" parent="Artwork"]
+top_level = true
+layout_mode = 0
+offset_left = 978.0
+offset_top = 31.0
+offset_right = 1846.0
+offset_bottom = 304.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "Cat Boba"
+
 [node name="Sprite2D" type="Sprite2D" parent="Artwork"]
-visible = false
 position = Vector2(960, 540)
 scale = Vector2(3, 3)
 texture = ExtResource("3_bqqt6")
@@ -67,9 +77,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -214.0
+offset_left = 480.3
 offset_top = 26.0
-offset_right = 215.0
+offset_right = 909.3
 offset_bottom = 189.0
 grow_horizontal = 2
 grow_vertical = 2

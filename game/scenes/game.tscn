@@ -1,9 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://cytkkrscdmnwi"]
+[gd_scene load_steps=22 format=3 uid="uid://cytkkrscdmnwi"]
 
 [ext_resource type="Script" uid="uid://dba3jvgjsun4l" path="res://scripts/levels/level1.gd" id="1_0tnpc"]
-[ext_resource type="Texture2D" uid="uid://qqut4h32vajm" path="res://art/place holders/counter.png" id="1_dunqu"]
 [ext_resource type="PackedScene" uid="uid://ds1iyocyrsebe" path="res://scenes/cup_dispenser.tscn" id="2_ak4cs"]
 [ext_resource type="PackedScene" uid="uid://i4kdvs1c8g3w" path="res://scenes/dropzone.tscn" id="2_ap0g3"]
+[ext_resource type="Texture2D" uid="uid://j4mity25qfvh" path="res://art/sprites/counter.png" id="3_1kice"]
 [ext_resource type="Script" uid="uid://boiaokfrr7bu4" path="res://scripts/Drink_Stack.gd" id="3_xlxah"]
 [ext_resource type="PackedScene" uid="uid://by6enp1a1o7w6" path="res://scenes/draggables/bobas/Pearl.tscn" id="4_pcabf"]
 [ext_resource type="Texture2D" uid="uid://ct4scvj8vw47b" path="res://art/sprites/LiquidSheet.png" id="4_ssvqc"]
@@ -18,25 +18,41 @@
 [ext_resource type="PackedScene" uid="uid://cq1tvw2xb0cvj" path="res://scenes/draggables/toppings/whipCream.tscn" id="14_37s47"]
 [ext_resource type="PackedScene" uid="uid://c30yd7j2t3c8n" path="res://scenes/draggables/toppings/cheeseFoam.tscn" id="15_bt5mj"]
 [ext_resource type="PackedScene" uid="uid://lo2mvg4gnby8" path="res://scenes/draggables/toppings/strawberries.tscn" id="16_e1j6l"]
+[ext_resource type="PackedScene" uid="uid://b542ss4hxjstd" path="res://scenes/customer.tscn" id="18_5newe"]
 [ext_resource type="PackedScene" uid="uid://pucfvb7n3g5s" path="res://scenes/UI/send_order_button.tscn" id="19_264po"]
+[ext_resource type="Texture2D" uid="uid://bb8onxq1kritf" path="res://art/sprites/background.png" id="20_5newe"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_0tnpc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
-
-[node name="Cat Speach" parent="." instance=ExtResource("8_gee14")]
-position = Vector2(-61, -98)
+limit_left = -960
+limit_top = -590
+limit_right = 960
+limit_bottom = 590
 
 [node name="BG" type="Node" parent="."]
 
+[node name="BG" type="Sprite2D" parent="BG"]
+texture = ExtResource("20_5newe")
+
+[node name="Customers" type="Node" parent="BG"]
+
+[node name="Customer" parent="BG/Customers" instance=ExtResource("18_5newe")]
+position = Vector2(-75, -34)
+
 [node name="Counter" type="Sprite2D" parent="BG"]
-texture = ExtResource("1_dunqu")
+texture = ExtResource("3_1kice")
 
 [node name="Liquid dispenser" type="Sprite2D" parent="BG"]
 position = Vector2(195, -40)
 texture = ExtResource("4_ssvqc")
+
+[node name="Cat Speach" parent="." instance=ExtResource("8_gee14")]
+top_level = true
+visibility_layer = 2
+position = Vector2(-61, -98)
 
 [node name="WorkStation" type="Node" parent="."]
 script = ExtResource("3_xlxah")

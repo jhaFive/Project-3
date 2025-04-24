@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cedrwtc05wxpp"
+path="res://.godot/imported/08. money-pickup-2-89563.mp3-45c51ca09f7a2367ae28a2a71ccc7b6c.mp3str"
+
+[deps]
+
+source_file="res://art/audio/08. money-pickup-2-89563.mp3"
+dest_files=["res://.godot/imported/08. money-pickup-2-89563.mp3-45c51ca09f7a2367ae28a2a71ccc7b6c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

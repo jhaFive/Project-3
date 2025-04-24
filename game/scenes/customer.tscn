@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b542ss4hxjstd"]
+
+[ext_resource type="Script" uid="uid://c388sja6a3xy0" path="res://customer.gd" id="1_xss0h"]
+[ext_resource type="Texture2D" uid="uid://dcxxpdn0r3fei" path="res://art/sprites/orange_cat.png" id="2_8qg4y"]
+
+[node name="Customer" type="Node2D"]
+script = ExtResource("1_xss0h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="cat" type="TextureRect" parent="Sprite2D"]
+offset_left = -60.0
+offset_top = -41.0
+offset_right = 61.0
+offset_bottom = 41.0
+texture = ExtResource("2_8qg4y")

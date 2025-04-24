@@ -107,7 +107,8 @@ func _send_order():
 		correct_order = true
 	else:
 		correct_order = false
-	
+		
+	$"../BG/Customers/Customer"._random_cat()
 	_update_point(correct_order)
 	
 	# testing
