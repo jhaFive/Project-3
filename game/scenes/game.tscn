@@ -61,7 +61,7 @@ script = ExtResource("3_xlxah")
 position = Vector2(40, -20)
 
 [node name="dropzone" parent="WorkStation" instance=ExtResource("2_ap0g3")]
-position = Vector2(-49, 131)
+position = Vector2(-52, 111)
 
 [node name="dropzone_m" type="Marker2D" parent="WorkStation"]
 position = Vector2(-41, -18)

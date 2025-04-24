@@ -13,9 +13,15 @@ func _process(delta):
 	else:
 		visible = false
 
-func _cup_check():
+func _cup():
+	has_cup = true
+	
+func _no_cup():
 	has_cup = true
 
 func _on_area_2d_body_entered(body) -> void:
 	if body.is_in_group("Cup"):
-		body.cup_delivered.connect(_cup_check)
+		body.cup_delivered.connect(_cup)
+	else:
+		has_cup = false
+		

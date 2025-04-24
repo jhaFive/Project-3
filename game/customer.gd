@@ -7,7 +7,7 @@ func _ready() -> void:
 	_random_cat()
 			
 func _random_cat():
-	cat = customerType[randi() % 6] + 1
+	cat = customerType[randi() % 6]
 	match cat:
 		1:
 			$Sprite2D/cat.texture=ResourceLoader.load("res://art/sprites/strawberry_cat.png")
