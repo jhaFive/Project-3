@@ -6,3 +6,4 @@ signal clear_ingredients
 
 func _on_button_pressed():
 	emit_signal("clear_ingredients")
+	$AudioStreamPlayer.play(.15)

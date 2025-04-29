@@ -33,6 +33,7 @@ func _on_click_detection_button_up() -> void:
 	Global.is_dragging = false
 	if in_dropzone and not dragging:
 		if dropzone.has_cup and workstation.boba_available:
+			$AudioStreamPlayer.play(.5)
 			emit_signal("star_delivered", "boba", "star")
 			global_position = end_location_marker.global_position
 		else:

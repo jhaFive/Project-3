@@ -20,8 +20,10 @@ func _no_cup():
 	has_cup = true
 
 func _on_area_2d_body_entered(body) -> void:
+	_check_cup(body)
+
+func _check_cup(body):
 	if body.is_in_group("Cup"):
 		body.cup_delivered.connect(_cup)
 	else:
 		has_cup = false
-		

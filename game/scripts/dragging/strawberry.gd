@@ -23,6 +23,7 @@ func _process(delta):
 
 # When the cup is being pressed
 func _on_click_detection_button_down() -> void:
+	$AudioStreamPlayer.play(2)
 	dragging = true
 	Global.is_dragging = true
 

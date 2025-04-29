@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcf3u2uprdby7"]
+[gd_scene load_steps=7 format=3 uid="uid://dcf3u2uprdby7"]
 
 [ext_resource type="Script" uid="uid://bgntdux6vhg5m" path="res://scripts/dragging/cup.gd" id="1_iw5ct"]
 [ext_resource type="Texture2D" uid="uid://bvghplyuqsflx" path="res://art/sprites/CupFront.png" id="2_ssn6n"]
 [ext_resource type="Texture2D" uid="uid://f2ovel57eceu" path="res://art/sprites/CupBack.png" id="3_kkhl5"]
+[ext_resource type="AudioStream" uid="uid://bnor8q76i6d8y" path="res://art/audio/01. duisterwho__take-plastic-cup-sound.wav" id="4_kkhl5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0y5yv"]
 size = Vector2(90, 121)
@@ -36,6 +37,9 @@ shape = SubResource("RectangleShape2D_0y5yv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bm1jm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_kkhl5")
 
 [connection signal="button_down" from="Cup/click detection" to="." method="_on_click_detection_button_down"]
 [connection signal="button_up" from="Cup/click detection" to="." method="_on_click_detection_button_up"]

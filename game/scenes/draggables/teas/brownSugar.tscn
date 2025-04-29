@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqh60unqv33dr"]
+[gd_scene load_steps=6 format=3 uid="uid://dqh60unqv33dr"]
 
 [ext_resource type="Script" uid="uid://bm45qwsc72dt2" path="res://scripts/dragging/brownSugar.gd" id="1_hlmgj"]
 [ext_resource type="Texture2D" uid="uid://eqvexh0xabue" path="res://art/sprites/BrownSugarIcon.png" id="2_frj2s"]
+[ext_resource type="AudioStream" uid="uid://7unl45up5u2h" path="res://art/audio/03. water-191999.mp3" id="3_frj2s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3wm1"]
 size = Vector2(60, 60)
@@ -31,6 +32,9 @@ shape = SubResource("RectangleShape2D_u3wm1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gfrpj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_frj2s")
 
 [connection signal="button_down" from="brownSugarSprite/click detection" to="." method="_on_click_detection_button_down"]
 [connection signal="button_up" from="brownSugarSprite/click detection" to="." method="_on_click_detection_button_up"]

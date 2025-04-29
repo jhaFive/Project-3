@@ -11,6 +11,7 @@ func spawn_cup():
 	var cup = scene.instantiate()
 	cup.spawn_location = Vector2(spawn_point.global_position)
 	workstation.add_child.call_deferred(cup)
+	$AudioStreamPlayer.play()
 
 func _on_press_detection_button_down():
 	var target_destroy_cup = get_parent().find_child("Cup_Obj")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqimhxqturugn"]
+[gd_scene load_steps=6 format=3 uid="uid://bqimhxqturugn"]
 
 [ext_resource type="Script" uid="uid://ddtycgybn4wb5" path="res://scripts/dragging/strawberry.gd" id="1_awvvd"]
 [ext_resource type="Texture2D" uid="uid://cj4o0v34phby1" path="res://art/sprites/StrawberryIcon.png" id="2_awvvd"]
+[ext_resource type="AudioStream" uid="uid://7unl45up5u2h" path="res://art/audio/03. water-191999.mp3" id="3_a8tsb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3wm1"]
 size = Vector2(60, 60)
@@ -31,6 +32,9 @@ shape = SubResource("RectangleShape2D_u3wm1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gfrpj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_a8tsb")
 
 [connection signal="button_down" from="strawberrySprite/click detection" to="." method="_on_click_detection_button_down"]
 [connection signal="button_up" from="strawberrySprite/click detection" to="." method="_on_click_detection_button_up"]

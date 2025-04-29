@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ds1iyocyrsebe"]
+[gd_scene load_steps=4 format=3 uid="uid://ds1iyocyrsebe"]
 
 [ext_resource type="Texture2D" uid="uid://bxccmlpts5pin" path="res://art/sprites/cupstack.png" id="2_3xu6n"]
 [ext_resource type="Script" uid="uid://bslt2roctqqm1" path="res://scripts/dragging/cup_dispenser.gd" id="2_81jp3"]
+[ext_resource type="AudioStream" uid="uid://bnor8q76i6d8y" path="res://art/audio/01. duisterwho__take-plastic-cup-sound.wav" id="3_3xu6n"]
 
 [node name="Cup dispenser" type="Node2D"]
 script = ExtResource("2_81jp3")
@@ -27,6 +28,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(-77, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3xu6n")
 
 [connection signal="button_down" from="cups/press detection" to="." method="_on_press_detection_button_down"]
 [connection signal="pressed" from="cups/press detection" to="." method="_on_press_detection_pressed"]

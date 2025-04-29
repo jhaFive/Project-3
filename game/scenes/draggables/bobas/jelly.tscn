@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnniegwoe1bp3"]
+[gd_scene load_steps=6 format=3 uid="uid://cnniegwoe1bp3"]
 
 [ext_resource type="Script" uid="uid://dx88t0tue2g58" path="res://scripts/dragging/jelly.gd" id="1_hba4i"]
 [ext_resource type="Texture2D" uid="uid://bp2fvd3pbo403" path="res://art/sprites/JellyBoba.png" id="2_hba4i"]
+[ext_resource type="AudioStream" uid="uid://dmnpa3h1fvubp" path="res://art/audio/05. object-drops-in-water-84639.mp3" id="3_m6wrm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hba4i"]
 size = Vector2(34, 38)
@@ -34,6 +35,9 @@ shape = SubResource("RectangleShape2D_hba4i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_rckg2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_m6wrm")
 
 [connection signal="button_down" from="JellySprite/click detection" to="." method="_on_click_detection_button_down"]
 [connection signal="button_up" from="JellySprite/click detection" to="." method="_on_click_detection_button_up"]

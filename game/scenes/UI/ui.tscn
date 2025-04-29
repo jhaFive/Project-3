@@ -12,6 +12,7 @@ grow_vertical = 2
 script = ExtResource("1_njpqj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="DrinkMix_Label" type="Label" parent="CanvasLayer"]
 offset_left = 681.0

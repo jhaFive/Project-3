@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://pucfvb7n3g5s"]
+[gd_scene load_steps=3 format=3 uid="uid://pucfvb7n3g5s"]
 
 [ext_resource type="Script" uid="uid://lsqwtgxuw50l" path="res://send_order_button.gd" id="1_3xrlf"]
+[ext_resource type="AudioStream" uid="uid://7unl45up5u2h" path="res://art/audio/03. water-191999.mp3" id="2_5a1tu"]
 
 [node name="SendOrderButton" type="Control"]
 layout_mode = 3
@@ -16,5 +17,8 @@ layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "Send Order"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5a1tu")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

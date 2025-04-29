@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://45bxsay812ik"]
+[gd_scene load_steps=3 format=3 uid="uid://45bxsay812ik"]
 
 [ext_resource type="Script" uid="uid://w2vvq3k5eyyy" path="res://scripts/UI/clear_button.gd" id="1_ggie6"]
+[ext_resource type="AudioStream" uid="uid://ta123h80haj" path="res://art/audio/02. plastic-crunch-83779.mp3" id="2_8w15t"]
 
 [node name="ClearButton" type="Control"]
 layout_mode = 3
@@ -16,5 +17,8 @@ layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 text = "CLEAR INGREDIENTS"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_8w15t")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
