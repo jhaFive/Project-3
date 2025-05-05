@@ -24,6 +24,37 @@ func _process(delta):
 			draggable = false
 			emit_signal("cup_delivered")
 			global_position = end_location_marker.global_position
+	
+	# Committing crimes because I'm running out of time to properly understand how signals work
+	match Global.current_boba:
+		"star":
+			$cupBoba.texture=ResourceLoader.load("res://art/sprites/cup_star_boba.png")
+		"pearl":
+			$cupBoba.texture=ResourceLoader.load("res://art/sprites/cup_black_boba.png")
+		"jelly":
+			$cupBoba.texture=ResourceLoader.load("res://art/sprites/cup_jelly_boba.png")
+		_:
+			$cupBoba.texture=null
+			
+	match Global.current_tea:
+		"strawberry":
+			$cupTea.texture=ResourceLoader.load("res://art/sprites/cup_strawberry_liquid.png")
+		"matcha":
+			$cupTea.texture=ResourceLoader.load("res://art/sprites/cup_matcha_liquid.png")
+		"brownSugar":
+			$cupTea.texture=ResourceLoader.load("res://art/sprites/cup_brownsugar_liquid.png")
+		_:
+			$cupTea.texture=null
+			
+	match Global.current_topping:
+		"whipCream":
+			$cupTopping.texture=ResourceLoader.load("res://art/sprites/cup_whipcream_topping.png")
+		"cheeseFoam":
+			$cupTopping.texture=ResourceLoader.load("res://art/sprites/cup_cheesefoam_topping.png")
+		"strawberries":
+			$cupTopping.texture=ResourceLoader.load("res://art/sprites/cup_fruits_topping.png")
+		_:
+			$cupTopping.texture=null
 
 # When the cup is being pressed
 func _on_click_detection_button_down() -> void:
@@ -51,3 +82,4 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 
 func _clear_drink():
 	queue_free()
+	$cupTea.visible = false

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfgcyvh772g47"]
+[gd_scene load_steps=7 format=3 uid="uid://bfgcyvh772g47"]
 
 [ext_resource type="Script" uid="uid://dvqffpmsmea0r" path="res://scripts/dragging/star.gd" id="1_c5ds5"]
 [ext_resource type="Texture2D" uid="uid://tsucgvabxdot" path="res://art/sprites/StarBoba.png" id="1_x85a1"]
 [ext_resource type="AudioStream" uid="uid://dmnpa3h1fvubp" path="res://art/audio/05. object-drops-in-water-84639.mp3" id="3_b3mnq"]
+[ext_resource type="AudioStream" uid="uid://cei8ppm5cnwpi" path="res://art/audio/Cat Boba SFX/pick_up_bowl.wav" id="4_or3uu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ds5"]
 size = Vector2(34, 38)
@@ -36,8 +37,11 @@ shape = SubResource("RectangleShape2D_c5ds5")
 position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_q5b73")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Putdown" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_b3mnq")
+
+[node name="Pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_or3uu")
 
 [connection signal="button_down" from="StarSprite/click detection" to="." method="_on_click_detection_button_down"]
 [connection signal="button_up" from="StarSprite/click detection" to="." method="_on_click_detection_button_up"]

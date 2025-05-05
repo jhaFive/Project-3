@@ -23,6 +23,7 @@ func _process(delta):
 
 # When the cup is being pressed
 func _on_click_detection_button_down() -> void:
+	$Pickup.play()
 	dragging = true
 	Global.is_dragging = true
 
@@ -34,9 +35,10 @@ func _on_click_detection_button_up() -> void:
 	Global.is_dragging = false
 	if in_dropzone and not dragging:
 		if dropzone.has_cup and workstation.boba_available:
-			$AudioStreamPlayer.play(.5)
+			$Putdown.play(.5)
 			emit_signal("jelly_delivered", "boba", "jelly")
 			global_position = end_location_marker.global_position
+			visible = false
 		else:
 			global_position = past_location
 
@@ -49,6 +51,7 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 		in_dropzone = false
 
 func _clear_drink():
+	visible = true
 	var tween
 	tween = create_tween()
 	tween.tween_property(self, "global_position", past_location,0.5)

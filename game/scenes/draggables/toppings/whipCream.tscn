@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cq1tvw2xb0cvj"]
+[gd_scene load_steps=7 format=3 uid="uid://cq1tvw2xb0cvj"]
 
 [ext_resource type="Script" uid="uid://dqdgj6lpa6nh0" path="res://scripts/dragging/whipCream.gd" id="1_hba4i"]
-[ext_resource type="Texture2D" uid="uid://cv30dj5f55mwd" path="res://art/place holders/whipped_cream_topping.png" id="2_rckg2"]
+[ext_resource type="Texture2D" uid="uid://b7muvfjdykeh5" path="res://art/sprites/WhipCream_Topping.png" id="2_wqf4l"]
+[ext_resource type="AudioStream" uid="uid://pqqa5l0e7nu4" path="res://art/audio/Cat Boba SFX/whipped_cream.wav" id="3_gvinq"]
+[ext_resource type="AudioStream" uid="uid://cei8ppm5cnwpi" path="res://art/audio/Cat Boba SFX/pick_up_bowl.wav" id="4_edhcp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hba4i"]
 size = Vector2(44, 140)
@@ -14,7 +16,7 @@ script = ExtResource("1_hba4i")
 
 [node name="whipCreamSprite" type="Sprite2D" parent="."]
 visibility_layer = 4
-texture = ExtResource("2_rckg2")
+texture = ExtResource("2_wqf4l")
 
 [node name="click detection" type="Button" parent="whipCreamSprite"]
 self_modulate = Color(1, 1, 1, 0)
@@ -37,6 +39,12 @@ shape = SubResource("RectangleShape2D_hba4i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rckg2")
+
+[node name="Putdown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gvinq")
+
+[node name="Pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_edhcp")
 
 [connection signal="button_down" from="whipCreamSprite/click detection" to="." method="_on_click_detection_button_down"]
 [connection signal="button_up" from="whipCreamSprite/click detection" to="." method="_on_click_detection_button_up"]

@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcf3u2uprdby7"]
+[gd_scene load_steps=10 format=3 uid="uid://dcf3u2uprdby7"]
 
 [ext_resource type="Script" uid="uid://bgntdux6vhg5m" path="res://scripts/dragging/cup.gd" id="1_iw5ct"]
 [ext_resource type="Texture2D" uid="uid://bvghplyuqsflx" path="res://art/sprites/CupFront.png" id="2_ssn6n"]
 [ext_resource type="Texture2D" uid="uid://f2ovel57eceu" path="res://art/sprites/CupBack.png" id="3_kkhl5"]
+[ext_resource type="Texture2D" uid="uid://0df7dp0fyq10" path="res://art/sprites/cup_matcha_liquid.png" id="3_kru4q"]
 [ext_resource type="AudioStream" uid="uid://bnor8q76i6d8y" path="res://art/audio/01. duisterwho__take-plastic-cup-sound.wav" id="4_kkhl5"]
+[ext_resource type="Texture2D" uid="uid://c8jycnx76xsap" path="res://art/sprites/cup_fruits_topping.png" id="4_v8m4r"]
+[ext_resource type="Texture2D" uid="uid://6f8xxl0j7m22" path="res://art/sprites/cup_star_boba.png" id="5_kjo86"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0y5yv"]
 size = Vector2(90, 121)
@@ -15,12 +18,24 @@ size = Vector2(88, 118)
 collision_mask = 2
 script = ExtResource("1_iw5ct")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_ssn6n")
+[node name="cupBack" type="Sprite2D" parent="."]
+texture = ExtResource("3_kkhl5")
+
+[node name="cupTea" type="Sprite2D" parent="."]
+position = Vector2(0, 8)
+texture = ExtResource("3_kru4q")
+
+[node name="cupTopping" type="Sprite2D" parent="."]
+position = Vector2(0, -22)
+texture = ExtResource("4_v8m4r")
+
+[node name="cupBoba" type="Sprite2D" parent="."]
+position = Vector2(0, 21)
+texture = ExtResource("5_kjo86")
 
 [node name="Cup" type="Sprite2D" parent="."]
 visibility_layer = 4
-texture = ExtResource("3_kkhl5")
+texture = ExtResource("2_ssn6n")
 
 [node name="click detection" type="Button" parent="Cup"]
 self_modulate = Color(1, 1, 1, 0)
@@ -32,10 +47,12 @@ offset_bottom = 44.0
 [node name="Area2D" type="Area2D" parent="." groups=["Cup"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_0y5yv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_bm1jm")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

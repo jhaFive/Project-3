@@ -14,3 +14,5 @@ var top = 'to0' # Replace number to get another ingredient 0 = cream, 1 = foam, 
 var current_boba: String
 var current_tea: String
 var current_topping: String
+
+var score = 0

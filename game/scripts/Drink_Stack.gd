@@ -20,7 +20,6 @@ signal newOrder
 
 # For scoring
 @onready var score_label = $Score
-var score = 0
 
 var correct_order: bool = false
 var has_cup: bool = false
@@ -133,8 +132,10 @@ func _send_order():
 	
 func _update_point(correct: bool):
 	if correct:
-		score += 100
-		score_label.text = "Score: " + str(score) + "\nCorrect :D"
+		$"../CorrectOrder".play()
+		Global.score += 100
+		score_label.text = "Score: " + str(Global.score) + "\nCorrect :D"
 	else:
-		score -= 100
-		score_label.text = "Score: " + str(score) + "\nWrong D:"
+		$"../FailOrder".play()
+		Global.score -= 100
+		score_label.text = "Score: " + str(Global.score) + "\nWrong D:"

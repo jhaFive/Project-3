@@ -45,9 +45,9 @@ func _new_order():
 	
 	# changes the placeholder texture to the correct top
 	if Global.top == 'to0':
-		$Sprite2D/Top.texture=ResourceLoader.load("res://art/place holders/whipped_cream_topping.png")
+		$Sprite2D/Top.texture=ResourceLoader.load("res://art/sprites/WhipCreamIcon.png")
 	elif Global.top == 'to1':
-		$Sprite2D/Top.texture=ResourceLoader.load("res://art/place holders/cheese_foam_topping.png")
+		$Sprite2D/Top.texture=ResourceLoader.load("res://art/sprites/CheeseFoamIcon.png")
 	elif Global.top == 'to2':
-		$Sprite2D/Top.texture=ResourceLoader.load("res://art/place holders/strawberries_topping.png")
+		$Sprite2D/Top.texture=ResourceLoader.load("res://art/sprites/FruitIcon.png")
 	

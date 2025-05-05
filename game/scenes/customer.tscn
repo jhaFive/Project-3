@@ -7,10 +7,4 @@
 script = ExtResource("1_xss0h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="cat" type="TextureRect" parent="Sprite2D"]
-offset_left = -60.0
-offset_top = -41.0
-offset_right = 61.0
-offset_bottom = 41.0
 texture = ExtResource("2_8qg4y")

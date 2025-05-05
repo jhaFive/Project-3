@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://by6enp1a1o7w6"]
+[gd_scene load_steps=7 format=3 uid="uid://by6enp1a1o7w6"]
 
 [ext_resource type="Script" uid="uid://baipmdxfu8i6b" path="res://scripts/dragging/pearl.gd" id="1_jb3cf"]
 [ext_resource type="Texture2D" uid="uid://cqxp0kaar3fff" path="res://art/sprites/NewPearl.png" id="2_1s0jb"]
 [ext_resource type="AudioStream" uid="uid://dmnpa3h1fvubp" path="res://art/audio/05. object-drops-in-water-84639.mp3" id="3_ucdu7"]
+[ext_resource type="AudioStream" uid="uid://cei8ppm5cnwpi" path="res://art/audio/Cat Boba SFX/pick_up_bowl.wav" id="4_36678"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lta3s"]
 size = Vector2(34, 38)
@@ -36,8 +37,11 @@ shape = SubResource("RectangleShape2D_lta3s")
 position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_eedt2")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Putdown" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ucdu7")
+
+[node name="Pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_36678")
 
 [connection signal="button_down" from="PearlSprite/click detection" to="." method="_on_click_detection_button_down"]
 [connection signal="button_up" from="PearlSprite/click detection" to="." method="_on_click_detection_button_up"]

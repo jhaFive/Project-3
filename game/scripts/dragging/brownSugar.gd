@@ -37,6 +37,7 @@ func _on_click_detection_button_up() -> void:
 		if dropzone.has_cup and workstation.tea_available:
 			emit_signal("brownSugar_delivered", "tea", "brownSugar")
 			global_position = end_location_marker.global_position
+			visible = false
 		else:
 			global_position = past_location
 
@@ -49,6 +50,7 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 		in_dropzone = false
 
 func _clear_drink():
+	visible = true
 	var tween
 	tween = create_tween()
 	tween.tween_property(self, "global_position", past_location,0.5)

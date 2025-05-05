@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cei8ppm5cnwpi"
+path="res://.godot/imported/pick_up_bowl.wav-0ba1f9fcc1cb0705de4ab5b903ecfab0.sample"
+
+[deps]
+
+source_file="res://art/audio/Cat Boba SFX/pick_up_bowl.wav"
+dest_files=["res://.godot/imported/pick_up_bowl.wav-0ba1f9fcc1cb0705de4ab5b903ecfab0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

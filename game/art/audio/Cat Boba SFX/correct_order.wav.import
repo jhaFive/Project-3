@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c542ln4g2ww38"
+path="res://.godot/imported/correct_order.wav-c62536786577f0b08177737ee88c93a2.sample"
+
+[deps]
+
+source_file="res://art/audio/Cat Boba SFX/correct_order.wav"
+dest_files=["res://.godot/imported/correct_order.wav-c62536786577f0b08177737ee88c93a2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

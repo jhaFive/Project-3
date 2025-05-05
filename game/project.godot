@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CatBoba"
-run/main_scene="uid://cytkkrscdmnwi"
+run/main_scene="uid://civpltgqqrbpw"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

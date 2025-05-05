@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c30yd7j2t3c8n"]
+[gd_scene load_steps=7 format=3 uid="uid://c30yd7j2t3c8n"]
 
 [ext_resource type="Script" uid="uid://8kcnto32by46" path="res://scripts/dragging/cheeseFoam.gd" id="1_5wavt"]
-[ext_resource type="Texture2D" uid="uid://cceda8gja1o8t" path="res://art/place holders/cheese_foam_topping.png" id="2_d62r3"]
+[ext_resource type="Texture2D" uid="uid://dhfaj5dt4nc4s" path="res://art/sprites/cheese_foam_topping.png" id="2_5wavt"]
+[ext_resource type="AudioStream" uid="uid://h07cwkaqxo13" path="res://art/audio/Cat Boba SFX/topping_in.wav" id="3_m71vi"]
+[ext_resource type="AudioStream" uid="uid://cei8ppm5cnwpi" path="res://art/audio/Cat Boba SFX/pick_up_bowl.wav" id="4_sovmj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hba4i"]
 size = Vector2(50, 88)
@@ -14,7 +16,7 @@ script = ExtResource("1_5wavt")
 
 [node name="cheeseFoamSprite" type="Sprite2D" parent="."]
 visibility_layer = 4
-texture = ExtResource("2_d62r3")
+texture = ExtResource("2_5wavt")
 
 [node name="click detection" type="Button" parent="cheeseFoamSprite"]
 self_modulate = Color(1, 1, 1, 0)
@@ -37,6 +39,12 @@ shape = SubResource("RectangleShape2D_hba4i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rckg2")
+
+[node name="Putdown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_m71vi")
+
+[node name="Pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_sovmj")
 
 [connection signal="button_down" from="cheeseFoamSprite/click detection" to="." method="_on_click_detection_button_down"]
 [connection signal="button_up" from="cheeseFoamSprite/click detection" to="." method="_on_click_detection_button_up"]
